@@ -1,6 +1,6 @@
 body{
     background-color: pink;
-    background-image: url("./img/img.png");
+    background-image: url("./img.png");
     background-repeat: repeat-x;
     background-size: 4%;
 }
@@ -9,14 +9,14 @@ body{
   margin-left: 250px;
   margin-right: 250px;
   border: 75px solid pink;
-  border-image-source: url("./img/TagSitrus.png");
+  border-image-source: url("./TagSitrus.png");
   border-image-repeat: round;
   border-image-width: 1;
   
 }
 @font-face {
     font-family: 'Pokemon';
-    src: url("./font/pokemon.ttf") format("truetype");
+    src: url("./pokemon.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
  }
