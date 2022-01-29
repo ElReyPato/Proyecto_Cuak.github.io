@@ -10,6 +10,17 @@ body{
     font-family: 'Pokemon';
     display: flex;
 }
+table{
+    margin-left: 75px;
+}
+tr,th{
+    background-color: #88a7a0;
+    border-style: solid;
+}
+#equipo{
+    width: 175px;
+    height: auto;
+}
 #fotoperfil{
     border-style: solid;
     border-radius: 55px;
@@ -54,12 +65,19 @@ div.main_div {
     font-family: 'Pokemon';
 }
 #contador{
+    font-size: 30px;
     margin-left: 45%;
     width: 150px;
+    border-radius: 10px;
+}
+#contador1{
+    border-radius: 10px;
+    font-size: 190%;
+    width: 80px;
 }
 #perfil{
-    width: 50px;
-    height: 50px;
+    width: 90px;
+    height: 90px;
     border-style: solid;
     border-radius: 55px;
     margin-left: 25px;
@@ -71,4 +89,9 @@ div.main_div {
     margin-left: 820px;
     height: auto;
     width: 200px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
