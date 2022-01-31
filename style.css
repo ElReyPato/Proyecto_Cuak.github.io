@@ -58,7 +58,7 @@ input {
 }
 div.main_div {
     display: flex;
-    justify-content: space-arround;
+    justify-content: space-around;
     text-align: center; 
     padding-top: 5%;
     font-size: 15px;
