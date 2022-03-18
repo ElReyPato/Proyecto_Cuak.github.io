@@ -4,6 +4,10 @@
     font-weight: normal;
     font-style: normal;
  }
+@media screen and (max-width: 800px) {
+  .left, .main, .right {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
 body {
     background-color: rgb(32, 32, 32);
     background-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0) 20%, rgba(0,0,0,0) 80%, rgba(0,0,0,1)), linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(to bottom, rgb(8, 8, 8), rgb(32, 32, 32));
