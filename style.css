@@ -1,97 +1,93 @@
-body{
-    background-color:  #DAF7A6 ;
-    background-image: url("./img.png");
-    background-repeat: repeat-x;
-    background-size: 4%;
-}
-#usuario{
-    margin-left: 10px;
-    margin-top: 100px;
-    font-family: 'Pokemon';
-    display: flex;
-}
-table{
-    margin-left: 75px;
-}
-tr,th{
-    background-color: #88a7a0;
-    border-style: solid;
-}
-#equipo{
-    width: 175px;
-    height: auto;
-}
-#fotoperfil{
-    border-style: solid;
-    border-radius: 55px;
-    height: auto;
-    width: 150px;
-}
-#pokepixel{
-  margin-top: 35px;
-  margin-left: 250px;
-  margin-right: 250px;
-  border: 75px solid pink;
-  border-image-source: url("./TagSitrus.png");
-  border-image-repeat: round;
-  border-image-width: 1;
-  
-}
 @font-face {
-    font-family: 'Pokemon';
-    src: url("./pokemon.ttf") format("truetype");
+    font-family: 'pkretro';
+    src: url("./pkretro.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
  }
-
-#pokemon{
-padding-bottom: 50px;
-padding-left: 5%;
-height: 175px;
-width: auto;
-}
-
-input {
-    text-align: center;
-    width: 50px;
-    
-}
-div.main_div {
+body {
+    background-color: rgb(32, 32, 32);
+    background-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0) 20%, rgba(0,0,0,0) 80%, rgba(0,0,0,1)), linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(to bottom, rgb(8, 8, 8), rgb(32, 32, 32));
+    background-size: 100% 100%, 11px 11px, 11px 11px, 11px 5px;
+    background-position: 0px 0px, 0px 0px, 5px 5px, 0px 0px;
+    }
+.portada{
     display: flex;
-    justify-content: space-around;
-    text-align: center; 
-    padding-top: 5%;
-    font-size: 15px;
-    font-family: 'Pokemon';
-}
-#contador{
-    font-size: 30px;
-    margin-left: 45%;
-    width: 150px;
-    border-radius: 10px;
-}
-#contador1{
-    border-radius: 10px;
-    font-size: 190%;
-    width: 80px;
-}
-#perfil{
-    width: 90px;
-    height: 90px;
-    border-style: solid;
-    border-radius: 55px;
-    margin-left: 25px;
-    margin-right: 25px;
+    justify-content: center;
 }
 
-#subastado{
-    margin-top: 50px;
-    margin-left: 820px;
-    height: auto;
-    width: 200px;
+#titulo{
+    padding-top: 15px;
+    font-family: pkretro;
+    font-size: 30px;
+    color: white;
 }
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+#subtitulo{
+    padding-top: 15px;
+    font-family: pkretro;
+    font-size: 20px;
+    color: white;
+    margin-left: 34%;
+}
+.imagenes{
+    padding-left: 10px;
+    height: 70px;
+    width: auto;
+}
+.menu{
+    display: flex;
+    justify-content: center;
+}
+*{margin:0;padding: 1px;;box-sizing:border-box;font-size:0;}  
+nav a{
+      text-decoration:none;
+      color:inherit;
+      font-size:15px;
+      font-family: pkretro;
+      }
+ 
+nav ul{
+    padding-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+nav li{
+      display:inline-block;
+      justify-content: center;
+      width:350px;
+      height:30px;
+      padding:5px 10px;
+      background-color:#000;
+      border:1px solid #000;
+      text-align:center;
+      color:#fff;
+      position:relative;
+}
+            
+nav li:hover{
+      background-color:#fff;
+      color:#000;
+      }
+            
+nav li>ul{
+      display:none;
+      }
+
+nav li:hover>ul{
+      display:block;
+      position:absolute;
+      top:6px;
+      left:0px;
+}
+#urgot{
+    padding-left: 350px;
+    margin-top: -7px;
+    width: 83%;
+    height: auto;
+}
+.builds{
+    padding-top: 15px;
+    margin-left: 29%;
+    width: 40%;
+    height: auto;
 }
