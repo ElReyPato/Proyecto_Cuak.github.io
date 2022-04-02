@@ -78,13 +78,13 @@
     transition: all 0.4s;
 }
 
-#menu ul li:hover {
-    background: white;
-}
+    #menu ul li:hover {
+        background: white;
+    }
 
-#menu ul a:hover {
-    color: black;
-}
+    #menu ul a:hover {
+        color: black;
+    }
 
 #menu ul ul {
     display: none;
@@ -123,13 +123,51 @@
 
 /*Fin Página de Inicio*/
 
+/*---Submenu*/
+.menu_menu{
+    margin-left: 15%;
+    display: grid;
+    grid-template-columns: repeat(3 ,1fr);
+}
+    .submenu:hover{
+        background-color: white;
+    }
+    .submenu_link:hover{
+        color: black;
+    }
+
+    .submenu{
+        transition: all 1s;
+        padding-top: 2%;
+        display: flex;
+        color: white;
+        justify-content: center;
+        background-color: #000;
+        width: 150px;
+        height: 100px;
+        
+    }
+    .submenu_name{
+        text-align: center;
+        margin-top: 15%;
+        font-size: 15px;
+        font-family: pkretro;
+        text-transform: uppercase;
+        
+    }
+    .submenu_link{
+        color: white;
+        text-decoration: none;
+    }
+/*Submenu---*/
+
 /*---Pokemon*/
 .div_equipos_pokemon{
     text-align: center;
     padding-top: 3%;
 }
 .PokeEquipo_Img{
-    width: 400px;
+    width: 350px;
     height: auto;
 }
     /*---Dentro del equipo*/
@@ -147,6 +185,12 @@
         color: white;
         margin: -5px;
 
+    }
+    .Pokemon_img{
+        margin-left: 15%;
+        padding-bottom: 2%;
+        width: 200px;
+        height: auto;
     }
     .ConjuntoPokemon{
         padding: 2%;
