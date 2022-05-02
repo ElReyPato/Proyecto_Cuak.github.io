@@ -1,45 +1,68 @@
 /*---Proyecto Cuak---*/
-    @font-face {
-    font-family: 'pkretro';
-    src: url("./pkretro.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-    }
-    /*Fondo*/
-    body {
-    background-color: rgb(32, 32, 32);
-    background-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0) 20%, rgba(0,0,0,0) 80%, rgba(0,0,0,1)),
-    linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(45deg, black 25%,
-    transparent 25%, transparent 75%, black 75%, black), linear-gradient(to bottom, rgb(8, 8, 8), rgb(32, 32, 32));
-    background-size: 100% 100%, 11px 11px, 11px 11px, 11px 5px;
-    background-position: 0px 0px, 0px 0px, 5px 5px, 0px 0px;
-    }
+@font-face {
+    font-family: 'Papernotes Sketch';
+    src: url("Papernotes Sketch.ttf") format("truetype");
+}
+
+html {
+    background-color: #e5e5f7;
+    background-image: linear-gradient(#444cf7 2px, transparent 2px), linear-gradient(90deg, #444cf7 2px, transparent 2px), linear-gradient(#444cf7 1px, transparent 1px), linear-gradient(90deg, #444cf7 1px, white 1px);
+    background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
+    background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+}
+
+body.overflow {
+    overflow: hidden;
+}
+
+/*Fondo*/
+div.fondo {
+    background: url("img/Anillas_Cuaderno.png") repeat-y;
+    position: absolute;
+    min-height: 100vh;
+    width: 100%;
+}
+
 /*---Portada*/
-.portada{
+.portada {
     text-align: center;
 }
-.div_titulo{
+
+.div_titulo {
     display: flex;
     justify-content: center;
-    
 }
-.titulo{
+
+.titulo {
+    margin-top: 15px;
     align-items: center;
-    font-family: pkretro;
-    font-size: 30px;
-    color: white;   
+    font-family: Papernotes Sketch;
+    font-size: 50px;
+    color: black;
+    font-weight: bold;
 }
-.subtitulo{
-    padding-top: 5px;
+
+.subtitulo {
+    margin-top: -10px;
     padding-bottom: 20px;
-    font-family: pkretro;
-    font-size: 20px;
-    color: white;
+    font-family: Papernotes Sketch;
+    font-size: 40px;
+    color: black;
 }
-.psyduck{
+
+.psyduck {
+    padding-top: 3px;
     padding-left: 1%;
     height: 70px;
     width: auto;
+}
+#boton_oculto{
+    margin-left: 47%;
+}
+.weed{
+    margin-top: 10%;
+    height: 35px;
+    width: 35px;
 }
 /*Portada---*/
 #menu ul {
@@ -51,9 +74,11 @@
 }
 
 #menu ul li {
-    background-color: #000;
-    width: 220px;
+    background-image: url("./img/pizarra.jpg");
+    background-size: 100% 100%;
+    width: 225px;
     text-align: center;
+    margin-top: -26px;
 }
 
 #menu ul a {
@@ -61,9 +86,9 @@
     color: white;
     text-decoration: none;
     font-weight: 400px;
-    font-size: 10px;
+    font-size: 20px;
     padding: 10px;
-    font-family: pkretro;
+    font-family: Papernotes Sketch;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: all 0.6s;
@@ -72,19 +97,9 @@
 #menu ul li {
     position: relative;
     float: left;
-    margin: 0;
-    padding: 0;
     color: white;
     transition: all 0.4s;
 }
-
-    #menu ul li:hover {
-        background: white;
-    }
-
-    #menu ul a:hover {
-        color: black;
-    }
 
 #menu ul ul {
     display: none;
@@ -105,151 +120,198 @@
     padding: 10px 15px;
 }
 
-#menu ul li:hover>ul {
-    display: block;
+/*---Imagen de urgot */
+#foto_urgot {
+    margin-top: -35px;
+    width: 70%;
 }
 
-        /*---Imagen de urgot */
-        #foto_urgot{
-            margin-top: -15px;
-            width: 65%;
-            height: auto;
-        }
-        #div_urgot{
-            text-align: center;
-            flex-wrap: wrap;
-        }
-        /*Imagen de urgot---*/
+#div_urgot {
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+/*Imagen de urgot---*/
 
 /*Fin Página de Inicio*/
 
 /*---Submenu*/
-.menu_menu{
-    margin-left: 15%;
+.menu_menu {
     display: grid;
-    grid-template-columns: repeat(3 ,1fr);
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(
+            300px,
+            1fr
+        )
+    );
+    margin-left: 10vw;
+    margin-right: 10vw;
 }
-    .submenu:hover{
-        background-color: white;
-    }
-    .submenu_link:hover{
-        color: black;
-    }
 
-    .submenu{
-        transition: all 1s;
-        padding-top: 2%;
-        display: flex;
-        color: white;
-        justify-content: center;
-        background-color: #000;
-        width: 150px;
-        height: 100px;
-        
-    }
-    .submenu_name{
-        text-align: center;
-        margin-top: 15%;
-        font-size: 15px;
-        font-family: pkretro;
-        text-transform: uppercase;
-        
-    }
-    .submenu_link{
-        color: white;
-        text-decoration: none;
-    }
+.submenu_img {
+    padding-right: 10%;
+    padding-top: 2%;
+    height: 80px;
+    width: auto;
+}
+
+.submenu:hover {
+    background-color: green;
+}
+
+
+.submenu {
+    margin-left: 5vw;
+    transition: all 1s;
+    margin-top: 4%;
+    justify-content: center;
+    display: flex;
+    color: white;
+    background-image: url("img/pizarra.jpg");
+    background-size: 100% 100%;
+    width: 20vw;
+    height: 5vw;
+    border-radius: 5px;
+}
+
+.submenu_name {
+    text-align: center;
+    font-size: 35px;
+    font-family: Papernotes Sketch;
+    text-transform: uppercase;
+}
+
+.submenu_link {
+    color: white;
+    text-decoration: none;
+}
+
 /*Submenu---*/
 
 /*---Pokemon*/
-.div_equipos_pokemon{
+.div_equipos_pokemon {
     text-align: center;
     padding-top: 3%;
 }
-.PokeEquipo_Img{
+
+.PokeEquipo_Img {
     width: 350px;
     height: auto;
 }
-    /*---Dentro del equipo*/
-    #tablapoke{
-        padding-left: 5%;
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-    .Pokemon_Texto{
-        font-family: pkretro;
-        font-size: 10px;
-        color: white;
-        margin: -5px;
 
-    }
-    .Pokemon_img{
-        margin-left: 15%;
-        padding-bottom: 2%;
-        width: 200px;
-        height: auto;
-    }
-    .ConjuntoPokemon{
-        padding: 2%;
-    }
+/*---Dentro del equipo*/
+#tablapoke {
+    padding-left: 5%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
-    /*Dentro del equipo---*/
+.Pokemon_Texto {
+    font-weight: bold;
+    font-family: Papernotes Sketch;
+    font-size: 30px;
+    color: black;
+    margin: -5px;
+}
+
+.pokemon_sprite {
+    width: 7vw;
+    height: auto;
+}
+
+.Pokemon_img {
+    margin-left: 15%;
+    padding-bottom: 2%;
+    width: 200px;
+    height: auto;
+}
+
+.ConjuntoPokemon {
+    padding: 2%;
+}
+
+/*Dentro del equipo---*/
 /*Pokemon---*/
 
 /*---League of Legend*/
-.builds_img{
+
+.builds_img {
     padding-top: 15px;
     margin-left: 29%;
     width: 40%;
     height: auto;
 }
+
+#videos_div {
+    justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 5%;
+}
+
+.video_lol {
+    padding-bottom: 5%;
+    width: 12cm;
+    height: 7cm;
+}
+
+fieldset,
+.nombre_videos {
+    background-image: url("./img/pizarra.jpg");
+    margin-bottom: 5%;
+    font-size: 25px;
+    border: 0ch;
+    color: white;
+    font-family: Papernotes Sketch;
+}
+
 /*League Of Legend---*/
 
 /*---VideoJuegos*/
-.Juegos_img{
+.Juegos_img {
+    transition: all 1s 0s ease;
     margin-left: 30%;
     width: 150px;
     height: auto;
     padding-bottom: 2%;
     padding-top: 2%;
 }
-.Nombre_juegos{
-    text-align: center;
-    font-family: pkretro;
-    font-size: 20px;
-    color: white;
+
+.Juegos_img:hover {
+    transform: scale(1.5);
+    border-radius: 7mm;
 }
-#Listado_Juegos{
+
+.Nombre_juegos {
+    text-align: center;
+    font-family: Papernotes Sketch;
+    font-size: 25px;
+    color: black;
+    font-weight: bold;
+}
+
+#Listado_Juegos {
     padding-top: 1%;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     justify-content: center;
     align-items: center;
 }
-.div_tipo_juego{
+
+.div_tipo_juego {
     text-align: center;
-    padding-top: 20px;
+    padding-top: 10px;
 }
-.tipo_juego{
-    font-family: pkretro;
-    font-size: 20px;
-    color: white;
+
+.tipo_juego {
+    font-family: Papernotes Sketch;
+    font-size: 40px;
+    color: black;
+    font-weight: bold;
 }
+
 /*VideoJuegos---*/
-/*---Música*/
-#div_musica{
-    padding-top: 1%;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    justify-content: center;
-    align-items: center;
-    margin-left: 15%;
-    margin-right: 15%;
-}
-.playlist{
-    text-align: center;
-}
-/*Música---*/
