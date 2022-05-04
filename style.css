@@ -56,14 +56,17 @@ div.fondo {
     height: 70px;
     width: auto;
 }
-#boton_oculto{
+
+#boton_oculto {
     margin-left: 47%;
 }
-.weed{
+
+.weed {
     margin-top: 10%;
     height: 35px;
     width: 35px;
 }
+
 /*Portada---*/
 #menu ul {
     display: flex;
@@ -122,7 +125,7 @@ div.fondo {
 
 /*---Imagen de urgot */
 #foto_urgot {
-    margin-top: -35px;
+    margin-top: -45px;
     width: 70%;
 }
 
@@ -138,22 +141,21 @@ div.fondo {
 /*---Submenu*/
 .menu_menu {
     display: grid;
-    grid-template-columns: repeat(
-        auto-fit,
-        minmax(
-            300px,
-            1fr
-        )
-    );
+    grid-template-columns: repeat(auto-fit,
+            minmax(300px,
+                1fr));
     margin-left: 10vw;
     margin-right: 10vw;
 }
 
 .submenu_img {
-    padding-right: 10%;
-    padding-top: 2%;
-    height: 80px;
+    margin-right: 10%;
+    margin-top: 2%;
+    height: 70px;
     width: auto;
+    border-radius: 75%;
+    border: black 5px solid;
+    background-color: white;
 }
 
 .submenu:hover {
@@ -315,3 +317,28 @@ fieldset,
 }
 
 /*VideoJuegos---*/
+
+/*---Caracteristicas Responsive */
+/*--- Tablet */
+
+@media (max-width: 1200px) {
+    .submenu {
+        width: 50%;
+        height: 90%;
+        padding-right: 10px;
+        margin-left: 90px;
+    }
+
+    .submenu_name {
+        display: none;
+    }
+
+    .submenu_img {
+        width: auto;
+        height: 70px;
+        margin-left: 15px;
+    }
+}
+
+/*tablet---*/
+/*Caracteristicas Responsive---*/
