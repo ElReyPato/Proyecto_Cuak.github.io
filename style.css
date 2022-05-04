@@ -158,10 +158,6 @@ div.fondo {
     background-color: white;
 }
 
-.submenu:hover {
-    background-color: green;
-}
-
 
 .submenu {
     margin-left: 5vw;
@@ -307,6 +303,7 @@ fieldset,
 .div_tipo_juego {
     text-align: center;
     padding-top: 10px;
+    justify-content: center;
 }
 
 .tipo_juego {
@@ -338,9 +335,17 @@ fieldset,
         height: 70px;
         margin-left: 15px;
     }
+    .Nombre_juegos {
+        margin-left: 15%;
+    }
 }
 
 @media (max-width: 900px) {
+
+    .subtitulo {
+        margin-top: -3%;
+        font-size: 35px;
+    }
 
     #menu ul {
         display: flex;
@@ -370,6 +375,52 @@ fieldset,
         text-transform: uppercase;
         letter-spacing: 1px;
         transition: all 0.6s;
+    }
+
+    #foto_urgot {
+        margin-top: -45px;
+        margin-left: 20px;
+        width: 103%;
+    }
+    
+    #div_urgot {
+        text-align: center;
+        flex-wrap: wrap;
+    }
+
+    .Juegos_img {
+        margin-top: -15%;
+        margin-left: 35%;
+        width: 150px;
+    }
+    
+    .Nombre_juegos {
+        margin-top: -5%;
+        margin-left: 15%;
+        font-size: 25px;
+    }
+    
+    #Listado_Juegos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 450px;
+    }
+    
+    .div_tipo_juego {
+        margin-top: -50px;
+        padding-bottom: 10px;
+    }
+    
+    .tipo_juego {
+        font-size: 35px;
+        margin-left: 5%;
+    }
+
+    #videos_div {
+        justify-items: center;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding-bottom: 5%;
     }
 }
 
