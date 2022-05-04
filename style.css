@@ -321,7 +321,7 @@ fieldset,
 /*---Caracteristicas Responsive */
 /*--- Tablet */
 
-@media (max-width: 500px) {
+@media (max-width: 1500px) {
     .submenu {
         width: 50%;
         height: 90%;
