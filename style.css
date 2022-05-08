@@ -1,4 +1,5 @@
 /*---Proyecto Cuak---*/
+/*---Estilo*/
 @font-face {
     font-family: 'Papernotes Sketch';
     src: url("Papernotes Sketch.ttf") format("truetype");
@@ -11,19 +12,25 @@ html {
     background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
 }
 
+
 body.overflow {
     overflow: hidden;
 }
 
-/*Fondo*/
+body.overflow2 {
+    overflow-x: hidden;
+}
+
+/*---Fondo*/
 div.fondo {
     background: url("img/Anillas_Cuaderno.png") repeat-y;
     position: absolute;
     min-height: 100vh;
     width: 100%;
 }
+/*Fondo---*/
 
-/*---Portada*/
+/*---Encabezado*/
 .portada {
     text-align: center;
 }
@@ -50,6 +57,14 @@ div.fondo {
     color: black;
 }
 
+h2.subtitulo {
+    margin-top: -25px;
+    padding-bottom: 20px;
+    font-family: Papernotes Sketch;
+    font-size: 35px;
+    color: black;
+}
+
 .psyduck {
     padding-top: 3px;
     padding-left: 1%;
@@ -57,17 +72,9 @@ div.fondo {
     width: auto;
 }
 
-#boton_oculto {
-    margin-left: 47%;
-}
-
-.weed {
-    margin-top: 10%;
-    height: 35px;
-    width: 35px;
-}
-
 /*Portada---*/
+
+/*---Menu*/
 #menu ul {
     display: flex;
     justify-content: center;
@@ -122,21 +129,7 @@ div.fondo {
     line-height: 120%;
     padding: 10px 15px;
 }
-
-/*---Imagen de urgot */
-#foto_urgot {
-    margin-top: -45px;
-    width: 70%;
-}
-
-#div_urgot {
-    text-align: center;
-    flex-wrap: wrap;
-}
-
-/*Imagen de urgot---*/
-
-/*Fin Página de Inicio*/
+/*Menu---*/
 
 /*---Submenu*/
 .menu_menu {
@@ -186,6 +179,19 @@ div.fondo {
 }
 
 /*Submenu---*/
+
+/*---Imagen de urgot */
+#foto_urgot {
+    margin-top: -45px;
+    width: 70%;
+}
+
+#div_urgot {
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+/*Imagen de urgot---*/
 
 /*---Pokemon*/
 .div_equipos_pokemon {
@@ -282,9 +288,11 @@ fieldset,
 .Juegos_img:hover {
     transform: scale(1.5);
     border-radius: 7mm;
+
 }
 
 .Nombre_juegos {
+    padding-left: 3%;
     text-align: center;
     font-family: Papernotes Sketch;
     font-size: 25px;
@@ -292,12 +300,12 @@ fieldset,
     font-weight: bold;
 }
 
+
 #Listado_Juegos {
     padding-top: 1%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-content: center;
-    align-items: center;
 }
 
 .div_tipo_juego {
@@ -315,10 +323,92 @@ fieldset,
 
 /*VideoJuegos---*/
 
+/*---WeedKipedia*/
+
+#boton_oculto {
+    margin-left: 47%;
+}
+
+.weed {
+    margin-top: 10%;
+    height: 35px;
+    width: 35px;
+}
+
+.weed_img {
+    transition: all 1s 0s ease;
+    margin-left: 30%;
+    width: auto;
+    height: 250px;
+    border: 15px solid transparent;
+    border-image: url("./img/marco.png") 30 stretch;
+    animation: brillo 15s 0s linear infinite;
+}
+
+.Nombre_weed {
+    padding-left: 30%;
+    font-family: Papernotes Sketch;
+    font-size: 25px;
+    color: black;
+    font-weight: bold;
+}
+
+.weed_img:hover {
+    transform: scale(1.5);
+    border: 16px solid transparent;
+    border-image: url("./img/marco.png") 30 stretch;
+}
+
+@keyframes brillo {
+    0% {
+        filter: brightness(1);
+    }
+
+    20% {
+        filter: brightness(1);
+    }
+
+    30% {
+        filter: brightness(1.25);
+    }
+
+    40% {
+        filter: brightness(1);
+    }
+
+    50% {
+        filter: brightness(1);
+    }
+
+    60% {
+        filter: brightness(1);
+    }
+
+    80% {
+        filter: brightness(1);
+    }
+
+    90% {
+        filter: brightness(1);
+    }
+
+    100% {
+        filter: brightness(1);
+    }
+}
+
+/*WeedKipedia---*/
+
 /*---Caracteristicas Responsive */
 /*--- Tablet */
 
 @media (max-width: 1290px) {
+
+    html,
+    body {
+        overflow: auto;
+    }
+
     .submenu {
         width: 50%;
         height: 90%;
@@ -335,6 +425,7 @@ fieldset,
         height: 70px;
         margin-left: 15px;
     }
+
     .Nombre_juegos {
         margin-left: 15%;
     }
@@ -364,6 +455,7 @@ fieldset,
         text-align: center;
         margin-top: -26px;
     }
+
     #menu ul a {
         display: block;
         color: white;
@@ -382,7 +474,7 @@ fieldset,
         margin-left: 20px;
         width: 103%;
     }
-    
+
     #div_urgot {
         text-align: center;
         flex-wrap: wrap;
@@ -393,24 +485,24 @@ fieldset,
         margin-left: 35%;
         width: 150px;
     }
-    
+
     .Nombre_juegos {
         margin-top: -5%;
         margin-left: 15%;
         font-size: 25px;
     }
-    
+
     #Listado_Juegos {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         margin-bottom: 450px;
     }
-    
+
     .div_tipo_juego {
         margin-top: -50px;
         padding-bottom: 10px;
     }
-    
+
     .tipo_juego {
         font-size: 35px;
         margin-left: 5%;
