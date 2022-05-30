@@ -402,9 +402,12 @@ fieldset,
 
 @media (max-width: 1290px) {
 
-    html,
-    body {
-        overflow: auto;
+    body.overflow {
+        overflow: hidden;
+    }
+    
+    body.overflow2 {
+        overflow-x: hidden;
     }
 
     .submenu {
@@ -427,34 +430,48 @@ fieldset,
     .Nombre_juegos {
         margin-left: 15%;
     }
-        .menu_menu{
+
+    .menu_menu{
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
 
-    .subtitulo {
-        margin-top: -3%;
+    .titulo{
+        padding-left: 10%;
         font-size: 35px;
     }
 
+    .subtitulo {
+        padding-left: 50px;
+        margin-top: -3%;
+        font-size: 25px;
+    }
+
+    .psyduck{
+        padding-top: 3px;
+        padding-left: 3%;
+        height: 50px;
+        width: auto;
+    }
+
     #menu ul {
-        display: flex;
+        display: grid;
         justify-content: center;
         list-style: none;
-        margin: 0;
-        padding: 0;
-        padding-left: 6%;
+        padding-left: 75px;
+        margin-top: -50px;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     #menu ul li {
         background-image: url("./img/pizarra.jpg");
         background-size: 100% 100%;
-        width: 125px;
-        height: 50px;
+        width: 130px;
+        height: 40px;
         text-align: center;
-        margin-top: -26px;
+        margin-top: 20px;
     }
 
     #menu ul a {
@@ -470,9 +487,9 @@ fieldset,
     }
 
     #foto_urgot {
-        margin-top: -45px;
+        margin-top: -20px;
         margin-left: 20px;
-        width: 103%;
+        width: 105%;
     }
 
     #div_urgot {
@@ -480,8 +497,12 @@ fieldset,
         flex-wrap: wrap;
     }
 
+    .tipo_juego{
+        font-size: 35px;
+        padding-left: 15%;
+    }
+
     .Juegos_img {
-        margin-top: -15%;
         margin-left: 35%;
         width: 150px;
     }
@@ -494,10 +515,8 @@ fieldset,
 
     #Listado_Juegos {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        margin-bottom: 450px;
+        grid-template-columns: repeat(1, 1fr);
     }
-    
     #videos_div {
         justify-items: center;
         display: grid;
