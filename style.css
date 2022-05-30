@@ -526,6 +526,31 @@ fieldset,
     .menu_menu{
         grid-template-columns: repeat(1, 1fr);
     }
+    
+    #videos_div {
+        justify-items: center;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding-bottom: 5%;
+        padding-left: 75px;
+        width: 75%;
+    }
+    
+    .video_lol {
+        padding-bottom: 5%;
+        width: 250px;
+        height: 150px;
+    }
+    
+    fieldset,
+    .nombre_videos {
+        background-image: url("./img/pizarra.jpg");
+        margin-bottom: 5%;
+        font-size: 25px;
+        border: 0ch;
+        color: white;
+        font-family: Papernotes Sketch;
+    }
 }
 
 /*tablet---*/
